@@ -1,0 +1,26 @@
+{
+    "Binaries" : {
+		"IntersectionChecker" : {
+			"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/IntersectionChecker/IntersectionChecker.sh"
+		},
+		"RegExSolver" : {
+			   "path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/RegExSolver/z3"
+			},
+		"Z3Bin" : {
+				"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/z3seq/bin/z3"
+			},
+		"Z3Dev" : {
+			"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/z3str3/z3"
+		},
+		"cvc4" : {
+			"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/cvc4/cvc4_18"
+		},
+		"Trau" : {
+			"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/z3_TRAU/z3"
+		},
+		"Ostrich" : {
+			"path" : "/home/supermaxine/Desktop/ICTAC2023/SolverBinaries/ostrich/ostrich-bin-1.0.1/ostrich"
+		}
+
+    }
+}
