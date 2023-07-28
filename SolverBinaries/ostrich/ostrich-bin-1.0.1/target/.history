@@ -1,0 +1,165 @@
+run
+run +assert simple-cvc-smtlib.smt2
+run +assert tests/simple-cvc-smtlib.smt2
+run +assert -stringTheory=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run +assert -stringTheory=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 -X
+run +assert -stringTheory=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +fullHelp
+run  +fullHelp +assert -stringTheory=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +fullHelp +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/1234.corecstrs.readable.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2
+run  +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2
+assembly
+clean
+assembly
+exit
+assembly
+run +assert tests/len-bug.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/len-bug.smt2
+test
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-d.smt2 +model
+test
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model
+test
+run
+test
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model
+test
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-b.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib-c.smt2 +model
+exit
+run
+assembly
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/prefix.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/prefix2.smt2 +model
+assembly
+exit
+run
+run +assert ../PyEx/8d0cf897d5329dfc8f0bf1d3acebb003bfff7ea59801aec03e053d13.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory ../PyEx/8d0cf897d5329dfc8f0bf1d3acebb003bfff7ea59801aec03e053d13.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/indexof.smt2
+run +assert +model -stringSolver=ostrich.OstrichStringTheory tests/indexof.smt2
+assembly
+run
+run +assert -stringSolver=ostrich.OstrichStringTheory ../PyEx/8d0cf897d5329dfc8f0bf1d3acebb003bfff7ea59801aec03e053d13.smt2
+run +assert tests/substring.smt2
+run +assert +model -stringSolver=ostrich.OstrichStringTheory tests/substring.smt2
+assembly
+exit
+run
+run +monadicDecomp tests/len-bug.smt2
+run -stringSolver=ostrich.OstrichStringTheory +monadicDecomp tests/len-bug.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/len-bug.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/1234.corecstrs.readable.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/simple-cvc-smtlib.smt2:
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/simple-cvc-smtlib.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/simple-cvc-smtlib-b.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/simple-cvc-smtlib-c.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+monadicDecomp tests/simple-cvc-smtlib-d.smt2
+assembly
+exit
+run
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/simple-cvc-smtlib-d.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/simple-cvc-smtlib.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/simple-cvc-smtlib-b.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/test-replace.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/test-replace2.smt2
+run -stringSolver=ostrich.OstrichStringTheory:+certificates tests/test-replace3.smt2
+assembly
+exit
+run -stringSolver=ostrich.OstrichStringTheory tests/adt2.smt2
+run -stringSolver=ostrich.OstrichStringTheory tests/adt2.smt2 +model
+run
+run -stringSolver=ostrich.OstrichStringTheory tests/adt2.smt2 +model
+run -stringSolver=ostrich.OstrichStringTheory tests/adt2.smt2 +model +assert
+exit
+run -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model +assert
+run -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2 +model +assert -length=off
+run -stringSolver=ostrich.OstrichStringTheory:simple-cvc-smtlib.smt2 tests/simple-cvc-smtlib.smt2 +model +assert 
+run -stringSolver=ostrich.OstrichStringTheory:-length=off tests/simple-cvc-smtlib.smt2 +model +assert 
+run -stringSolver=ostrich.OstrichStringTheory:-length=off tests/simple-cvc-smtlib.smt2  +assert 
+run -stringSolver=ostrich.OstrichStringTheory:-length=on tests/simple-cvc-smtlib.smt2  +assert 
+run -stringSolver=ostrich.OstrichStringTheory:-length=on tests/simple-cvc-smtlib.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/simple-cvc-smtlib.smt2  +assert  +model
+assembly
+exit
+run
+assembly
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1b.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1c.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1b.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer1c.smt2  +assert  +model
+exit
+run
+assembly
+run
+assembly
+run -stringSolver=ostrich.OstrichStringTheory tests/prefix3.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/prefix.smt2  +assert  +model
+run -stringSolver=ostrich.OstrichStringTheory tests/prefix3.smt2  +assert  +model
+assembly
+exit
+run
+assembly
+testOnly ostrich.BricsPrioTransducer.*
+testOnly ostrich.BricsPrioTransducer*
+test
+testOnly ostrich.BricsPrioTransducer*
+exit
+assembly
+exit
+run
+assembly
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer5.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer5.smt2  +assert +model +eager
+run -stringSolver=ostrich.OstrichStringTheory:+eager tests/transducer5.smt2  +assert +model 
+run -stringSolver=ostrich.OstrichStringTheory tests/transducer5.smt2  +assert +model 
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer2.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer3.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer4.smt2  +assert +model
+run -stringSolver=ostrich.OstrichStringTheory tests/priorityTransducer3.smt2  +assert +model
+assembly
+exit
+run
+exit
+clean
+run
+run +assert -stringSolver=ostring.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostricg.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostricg.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2 +model
+run -assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2 +model +incremental
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex2.smt2
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex2.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex3.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex3b.smt2 +model
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex4.smt2 +model
+assembly
+exit
+run +assert -stringSolver=ostrich.OstrichStringTheory tests/parse-regex2b.smt2 +model
+assembly
+exit
